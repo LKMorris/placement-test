@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="slick.css">
+    <link rel="stylesheet" type="text/css" href="slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="slick.js"></script>
+    <script src="init.js"></script>
+</head>
+    
+<body>
+<div class="images">
+  <div><img src="images/1.main_5.jpg"></div>
+  <div><img src="images/8x6_locking_1_5.jpg"></div>
+  <div><img src="images/12x6-locking-target-sheet-1.jpg"></div>
+  <div><img src="images/forb_black_1_1.jpg"></div>
+  <div><img src="images/main4.jpg"></div>
+</div>
+
+    
+<div>
+    <ol>
+        <li>We have a variable, defined as $string, which is a string 200 characters long, and we want to display only 40 characters in a snippet. What approach would you take to achieve this?</li>
+        <button onclick="revealMessage1()">Reveal</button>
+        <div id="hiddenMessage1" style="display:none">
+            <p>$pieces = substr($text, 0, 40);
+                <br>echo $pieces;</p></div>
+        
+        <li>$string contains letters and numbers, the numbers aren't relevant to us, so we want to remove all of the numbers from the string. What approach would you take to achieve this?</li>
+        <button onclick="revealMessage2()">Reveal</button>
+        <div id="hiddenMessage2" style="display:none">
+        <p>function remove_numbers($string) {<br>
+        $num = array(0,1,2,3,4,5,6,7,8,9);<br>
+        return str_replace($num, null, $string);}</p></div>
+        
+        <li>$string has been encrypted using a basic encryption method. We know that all occurrences of the letters 'a, r, d' were replaced with 'c, m, e' respectively; we need to replace these letters with the respective letters. What approach would you take to achieve this?</li>
+        <button onclick="revealMessage3()">Reveal</button>
+        <div id="hiddenMessage3" style="display:none">
+            <p>$string = 'cmeard';<br>
+                $string = strtr($string, 'cme', 'ard');<br>
+                echo $string;</p></div>
+        
+        <li>We know that $string is a url, what we need to know is the domain name used in the url. What approach would you take to achieve this?</li>
+        <button onclick="revealMessage4()">Reveal</button>
+        <div id="hiddenMessage4" style="display:none">
+            <p>$parse = parse_url($url);<br>
+                echo $parse['host'];</p></div>
+        
+        <li>Lastly, there were 2 parameters passed in the url. We need to know the name and value of the 2 parameters. What approach would you take to achieve this?</li>
+        <button onclick="revealMessage5()">Reveal</button>
+        <div id="hiddenMessage5" style="display:none">
+            <p>href='page2.php?id=1234&user=lee<br>
+                echo $_GET['id']; // output 1234<br>
+                echo $_GET['user']; // output lee<br>
+                </p></div>
+    </ol>
+    
+</div>
+    
+</body>
+
+</html>
